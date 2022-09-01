@@ -206,7 +206,7 @@ let allMusic = [
    {
     name: "Soldier of fortune", 
     artist: "Deep Purple",
-    img: "music-32",
+    img: "music-33",
     src: "music-33"
   }
  

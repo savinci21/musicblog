@@ -1,23 +1,66 @@
 <!DOCTYPE html>
 <!-- Coding By CodingNepal - youtube.com/codingnepal -->
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>musicPlayer</title>
+  <title>musicBlog</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
+  <video autoplay loop muted plays-inline class="back-video">
+    <source src="images/back-vedio.mp4" type="video/mp4">
+  </video>
+
   <div class="wrapper">
     <div class="top-bar">
-      <i class="material-icons">expand_more</i>
-      <span>Savinci Playing</span>
-      <i class="material-icons">more_horiz</i>
+      <!-- <i class="material-icons first">expand_more</i> -->
+      <span class="material-icons">headset</span>
+      <span>MusicBlog Playing</span>
+      <span class="material-icons">equalizer</span>
+      <!-- <i class="material-icons second">expand_more</i> -->
     </div>
+
+    <!--   <i class="material-icons">more_horiz</i> -->
     <div class="img-area">
+      <div class="main">
+        <div class="navigation">
+          <span style="--i:0;--x:-1;--y:0;">
+            <ion-icon name="camera-outline" onclick="window.open('assets/photo/photo.html', '_blank')"></ion-icon>
+          </span>
+          <span style="--i:1;--x:1;--y:0;">
+            <ion-icon name="images-outline" onclick="window.open('assets/webtoon/index.html', '_blank')"></ion-icon>
+          </span>
+          <span style="--i:2;--x:0;--y:-1;">
+            <ion-icon name="logo-youtube" onclick="window.open('https://www.youtube.com/', '_blank')"></ion-icon>
+          </span>
+          <span style="--i:3;--x:0;--y:1;">
+            <ion-icon name="logo-facebook" onclick="window.open('https://github.com/savinci21/', '_blank')"></ion-icon>
+          </span>
+          <span style="--i:4;--x:-1;--y:1;">
+            <ion-icon name="logo-instagram" onclick="window.open('https://github.com/savinci21/', '_blank')"></ion-icon>
+          </span>
+          <span style="--i:5;--x:-1;--y:-1;">
+          <ion-icon name="videocam-outline" onclick="window.open('assets/video/index.html', '_blank')"></ion-icon>
+          </span>
+          <span style="--i:6;--x:1;--y:-1;">
+            <ion-icon name="logo-github" onclick="window.open('https://github.com/savinci21/', '_blank')"></ion-icon>
+          </span>
+          <span style="--i:7;--x:1;--y:1;">
+            <ion-icon name="mail-outline" onclick="window.open('assets/email.html', '_blank')" ></ion-icon>
+          </span>
+        </div>
+        <div class="close">
+          <ion-icon name="close-outline"></ion-icon>
+        </div>
+      </div>
       <img src="" alt="">
     </div>
+
     <div class="song-details">
       <p class="name"></p>
       <p class="artist"></p>
@@ -43,7 +86,7 @@
     <div class="music-list">
       <div class="header">
         <div class="row">
-          <i class= "list material-icons">queue_music</i>
+          <i class="list material-icons">queue_music</i>
           <span>Music list</span>
         </div>
         <i id="close" class="material-icons">close</i>
@@ -56,6 +99,20 @@
 
   <script src="js/music-list.js"></script>
   <script src="js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    let navigation = document.querySelector('.navigation');
+    let close = document.querySelector('.close');
+    navigation.onclick = function () {
+      navigation.classList.add('active');
+    }
+    close.onclick = function () {
+      navigation.classList.remove('active');
+    }
+  </script>
 
 </body>
+
 </html>

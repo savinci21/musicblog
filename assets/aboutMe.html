@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>about me</title>
+    <style>
+ @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* how to use to my computer */
+@font-face {
+    src: url("../fonts/Poppins-Regular.ttf");
+    font-family: "poppins";
+}
+
+/* common section start */
+* {
+    font-family: 'poppins', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #333;
+    --white: #fff;
+    --mycolor: #293a58;
+    --yellow: #ffde00;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Poppins-Regular', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+img,
+svg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+p {
+    font-size: 1.4rem;
+    color: black;
+    text-align: left;
+    line-height: 1.9rem;
+}
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.section-title span {
+    color: crimson;
+}
+
+.cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color: crimson;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+    text-align: center;
+}
+
+.cta:hover {
+    color: #fff;
+    background-color: crimson;
+}
+
+.brand h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.brand h1 span {
+    color: crimson;
+}
+
+/* common section end */
+
+
+/* About section */
+#about .about {
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+#about .col-left {
+    width: 250px;
+    height: 360px;
+}
+
+#about .col-right {
+    width: 100%;
+}
+
+#about .col-right h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+
+#about .col-right p {
+    margin-bottom: 20px;
+}
+
+#about .col-right .cta {
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+
+#about .col-left .about-img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 8px solid white;
+
+}
+
+#about .col-left .about-img::after {
+    content: "";
+    position: absolute;
+    left: -33px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid crimson;
+    z-index: -1;
+}
+
+/* End About section*/
+
+
+
+/* I will make it reponsive */
+
+/* Media Query for tanlet */
+@media only screen and (min-width:768px) {
+    .cta {
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+
+    h1.section-title {
+        font-size: 6rem;
+    }
+
+
+    /* Media Query About */
+    #about .about {
+        flex-direction: row;
+    }
+
+    #about .col-left {
+        width: 600px;
+        height: 400px;
+        padding-left: 60px;
+    }
+
+    #about .about .col-left .about-img::after {
+        left: -45px;
+        top: 34px;
+        height: 98%;
+        width: 98%;
+        border: 10px solid crimson;
+    }
+
+    #about .col-right {
+        text-align: left;
+        padding: 30px;
+    }
+
+    #about .col-right h1 {
+        text-align: left;
+    }
+}
+
+/* Media Query End About */
+
+@media(max-width:360px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row .input-group {
+        width: 100%;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <section id="about">
+        <div class="about container">
+            <div class="col-left">
+                <div class="about-img"><img src="../images/1.png" alt="img"></div>
+            </div>
+            <div class="col-right">
+                <h1 class="section-title">About <span>me</span></h1>
+                <h2>Roughly Story And Graphic Mania</h2>
+                <p>I'm an art mania who wants to express everything in the world with stories and graphics Roughly so.
+                    <br>But I'm curious about what's inside me and I want to
+                    show it to you. The world has come to be able to handle digital, and I'm grateful to mankind
+                    for sharing it unconditionally. If possible, I would like to have fun
+                    or put my message in it and enjoy watching it togather comfortably.<br>
+                    Please please me. You must be happy.
+
+                </p>
+                <a href="../musicPlayer/index.html" class="cta">Click Then MyMusic playing
+                 </a>
+
+            </div>
+        </div>
+    </section>
+ </body>
+
+</html>
